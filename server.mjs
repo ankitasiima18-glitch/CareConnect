@@ -1,7 +1,7 @@
 import http from "node:http";
 import { GoogleGenAI } from "@google/genai";
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 if (!process.env.GEMINI_API_KEY) {
   console.error("❌ GEMINI_API_KEY is missing.");
@@ -141,6 +141,6 @@ ${JSON.stringify(clinicalData, null, 2)}
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`✅ Gemini AI server running at http://localhost:${PORT}`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Gemini AI server running on port ${PORT}`);
 });
