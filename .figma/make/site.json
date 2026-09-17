@@ -1,0 +1,10 @@
+{
+  "description": "Streamlines patient intake by allowing users to securely enter medical history before appointments, enhancing efficiency and care quality in healthcare settings.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
